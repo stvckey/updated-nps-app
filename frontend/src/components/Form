@@ -1,0 +1,58 @@
+import React, { useState } from 'react';
+
+function Form() {
+  const [formData, setFormData] = useState({ name: '', email: '' });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:5000/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        // Handle success or redirection to another page
+      } else {
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <div>
+      <h1>Submit Form</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleInputChange}
+        />
+        <br />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleInputChange}
+        />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default Form;

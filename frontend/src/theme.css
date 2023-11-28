@@ -1,0 +1,139 @@
+.body {
+    background-color: #FFFFDD;
+    color: black;
+    margin: 0; 
+    height: 100vh
+}
+
+.header{
+    z-index: 5;
+    background-color: #004225;
+    color: white;
+    padding: .5em;
+    position: sticky;
+    top: 0;
+    display: flex;
+}
+
+.filters{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: #FFB000;
+    z-index: 5;
+    position: sticky;
+}
+
+.profile{
+    position: absolute;
+    right:0;
+    padding-right: .5em;
+    padding-left: .5em;
+}
+
+.results{
+    height: 100%;
+    background-color: #F5F5DC; 
+    padding-top: 1;
+    padding-bottom:0;
+    width: 100%;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+.feed{
+    height: 14.5vh;
+    background-color: #004225;
+    color: #FFCF9D;
+    bottom:0;
+    width: 100%;
+    overflow-y:hidden;
+    position: sticky;
+    display: flex;
+}
+
+.logo{
+    padding-right: 5em;
+}
+
+.result_info{
+    padding-left:5%;
+    border-bottom: 3px solid black;
+}
+
+.content{
+    z-index: 3;
+    min-width: 475px ;
+    height: 100%;
+    border: black;
+    float: left;
+    max-width: 25%;
+
+}
+
+.map{
+    z-index: 1;
+    width: 100%;
+    height: 100% !important;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.states-menu{
+    height: 12rem;
+    overflow-y: auto;
+}
+
+.park-name{
+    color:#004225;
+    font-size: 16pt;
+}
+
+.states-menu-btn{
+    background-color: #FFCF9D !important;
+    border-color: #004225 !important;
+    border-width: 2px !important;
+    margin: 5px;
+}
+
+.form-group{
+    display: flex;
+}
+
+.page{
+    display: flex;
+    height: 75vh;
+}
+
+html {
+    overflow: hidden;
+}
+
+.btn, .form-control{
+    background-color: white !important;
+    border-color: #004225 !important;
+    border-width: 2px !important;
+    color: #004225 !important;
+    margin: 5px;
+}
+
+.search-btn{
+    background-color:#004225 !important;
+    color: white !important;
+}
+
+.card-box {
+    border: solid purple;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.card-img{
+    max-width: 200px;
+    height: 150px;
+    overflow: hidden;
+}
